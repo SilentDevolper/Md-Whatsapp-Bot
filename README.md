@@ -4,7 +4,7 @@
 
 ## Md-Whatsapp-Bot
 
-<[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Queen-Oshi) by [ᴍɪʜͥɪʀͣᴀͫɴɢᴀ](https://github.com/MihirangaKalhara/Queen-Oshi)
+<[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Md-Whatsapp-Bot) by [ᴍɪʜͥɪʀͣᴀͫɴɢᴀ](https://github.com/MihirangaKalhara/Md-Whatsapp-Bot)
 
 <Dont forget to give a star bro.😕 IF Heroku Deploy seems Error, Fork This Repo And Try Deploy Again
 
