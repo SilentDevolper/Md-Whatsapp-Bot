@@ -1,6 +1,6 @@
 //═══════════════════════════════════════════════════════//
 //
-//                              ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot
+//                              ᴍɪʜͥɪʀͣᴀͫɴɢᴀ 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳 𝙱𝚘𝚝
 //𝙰𝙳𝙾𝙿𝚃𝙴𝙳 𝙵𝚁𝙾𝙼  ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ 𝙱𝙾𝚃 𝚅1 𝙱𝚈 ᴍɪʜͥɪʀͣᴀͫɴɢᴀ 
 //
 //════════════════════════════//
@@ -15,8 +15,8 @@ global.owner = ['ᴍɪʜͥɪʀͣᴀͫɴɢᴀ']
 global.premium = ['94763116441']
 global.ownernomer = '94763116441'
 global.ownername = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ'
-global.botname = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ]'
-global.footer = '©ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ].'
+global.botname = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳 𝙱𝚘𝚝[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ]'
+global.footer = '©ᴍɪʜͥɪʀͣᴀͫɴɢᴀ 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳 𝙱𝚘𝚝[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ].'
 global.ig = 'https://github.com/MihirangaKalhara/Md-Whatsapp-Bot'
 global.region = 'India, South India, Kerala'
 global.sc = 'https://github.com/MihirangaKalhara/Md-Whatsapp-Bot'
