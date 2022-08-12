@@ -1,5 +1,5 @@
 <p align="center">
-img src="https://telegra.ph/file/5b88df83fe259d9827fd9.jpg" alt="nz" width="350"/>
+<img src="https://telegra.ph/file/5b88df83fe259d9827fd9.jpg" alt="nz" width="350"/>
 </p>
 
 ## Queen-Oshi
