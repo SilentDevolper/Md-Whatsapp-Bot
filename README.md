@@ -4,7 +4,7 @@
 
 ## Queen-Oshi
 
-<[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Queen-Oshi) by [ᴏ ɴ ͥᴇ ͣs ͫʜ ɪ](https://github.com/MihirangaKalhara/Queen-Oshi)
+<[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Queen-Oshi) by [ᴍɪʜͥɪʀͣᴀͫɴɢᴀ](https://github.com/MihirangaKalhara/Queen-Oshi)
 
 <Dont forget to give a star bro.😕 IF Heroku Deploy seems Error, Fork This Repo And Try Deploy Again
 
