@@ -2,7 +2,7 @@
 <img src="https://telegra.ph/file/5b88df83fe259d9827fd9.jpg" alt="nz" width="350"/>
 </p>
 
-## Md-Whatsapp-Bot
+## 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳 𝙱𝚘𝚝
 
 <[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Md-Whatsapp-Bot) by [ᴍɪʜͥɪʀͣᴀͫɴɢᴀ](https://github.com/MihirangaKalhara/Md-Whatsapp-Bot)
 
