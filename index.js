@@ -432,3 +432,159 @@ Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURICom
         await fs.writeFileSync(trueFileName, buffer)
         return trueFileName
     }
+
+    ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.downloadMediaMessage = async (message) => {
+        let mime = (message.msg || message).mimetype || ''
+        let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
+        const stream = await downloadContentFromMessage(message, messageType)
+        let buffer = Buffer.from([])
+        for await(const chunk of stream) {
+            buffer = Buffer.concat([buffer, chunk])
+	}
+
+        return buffer
+     } 
+    
+    /**
+     * 
+     * @param {*} jid 
+     * @param {*} path 
+     * @param {*} filename
+     * @param {*} caption
+     * @param {*} quoted 
+     * @param {*} options 
+     * @returns 
+     */
+    ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
+        let types = await ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.getFile(path, true)
+           let { mime, ext, res, data, filename } = types
+           if (res && res.status !== 200 || file.length <= 65536) {
+               try { throw { json: JSON.parse(file.toString()) } }
+               catch (e) { if (e.json) throw e.json }
+           }
+       let type = '', mimetype = mime, pathFile = filename
+       if (options.asDocument) type = 'document'
+       if (options.asSticker || /webp/.test(mime)) {
+        let { writeExif } = require('./lib/exif')
+        let media = { mimetype: mime, data }
+        pathFile = await writeExif(media, { packname: options.packname ? options.packname : global.packname, author: options.author ? options.author : global.author, categories: options.categories ? options.categories : [] })
+        await fs.promises.unlink(filename)
+        type = 'sticker'
+        mimetype = 'image/webp'
+        }
+       else if (/image/.test(mime)) type = 'image'
+       else if (/video/.test(mime)) type = 'video'
+       else if (/audio/.test(mime)) type = 'audio'
+       else type = 'document'
+       await ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
+       return fs.promises.unlink(pathFile)
+       }
+
+    /**
+     * 
+     * @param {*} jid 
+     * @param {*} message 
+     * @param {*} forceForward 
+     * @param {*} options 
+     * @returns 
+     */
+    ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.copyNForward = async (jid, message, forceForward = false, options = {}) => {
+        let vtype
+		if (options.readViewOnce) {
+			message.message = message.message && message.message.ephemeralMessage && message.message.ephemeralMessage.message ? message.message.ephemeralMessage.message : (message.message || undefined)
+			vtype = Object.keys(message.message.viewOnceMessage.message)[0]
+			delete(message.message && message.message.ignore ? message.message.ignore : (message.message || undefined))
+			delete message.message.viewOnceMessage.message[vtype].viewOnce
+			message.message = {
+				...message.message.viewOnceMessage.message
+			}
+		}
+
+        let mtype = Object.keys(message.message)[0]
+        let content = await generateForwardMessageContent(message, forceForward)
+        let ctype = Object.keys(content)[0]
+		let context = {}
+        if (mtype != "conversation") context = message.message[mtype].contextInfo
+        content[ctype].contextInfo = {
+            ...context,
+            ...content[ctype].contextInfo
+        }
+        const waMessage = await generateWAMessageFromContent(jid, content, options ? {
+            ...content[ctype],
+            ...options,
+            ...(options.contextInfo ? {
+                contextInfo: {
+                    ...content[ctype].contextInfo,
+                    ...options.contextInfo
+                }
+            } : {})
+        } : {})
+        await ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
+        return waMessage
+    }
+
+    ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.cMod = (jid, copy, text = '', sender = ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.user.id, options = {}) => {
+        //let copy = message.toJSON()
+		let mtype = Object.keys(copy.message)[0]
+		let isEphemeral = mtype === 'ephemeralMessage'
+        if (isEphemeral) {
+            mtype = Object.keys(copy.message.ephemeralMessage.message)[0]
+        }
+        let msg = isEphemeral ? copy.message.ephemeralMessage.message : copy.message
+		let content = msg[mtype]
+        if (typeof content === 'string') msg[mtype] = text || content
+		else if (content.caption) content.caption = text || content.caption
+		else if (content.text) content.text = text || content.text
+		if (typeof content !== 'string') msg[mtype] = {
+			...content,
+			...options
+        }
+        if (copy.key.participant) sender = copy.key.participant = sender || copy.key.participant
+		else if (copy.key.participant) sender = copy.key.participant = sender || copy.key.participant
+		if (copy.key.remoteJid.includes('@s.whatsapp.net')) sender = sender || copy.key.remoteJid
+		else if (copy.key.remoteJid.includes('@broadcast')) sender = sender || copy.key.remoteJid
+		copy.key.remoteJid = jid
+		copy.key.fromMe = sender === ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.user.id
+
+        return proto.WebMessageInfo.fromObject(copy)
+    }
+
+
+    /**
+     * 
+     * @param {*} path 
+     * @returns 
+     */
+    ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝.getFile = async (PATH, save) => {
+        let res
+        let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split`,`[1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
+        //if (!Buffer.isBuffer(data)) throw new TypeError('Result is not a buffer')
+        let type = await FileType.fromBuffer(data) || {
+            mime: 'application/octet-stream',
+            ext: '.bin'
+        }
+        filename = path.join(__filename, '../src/' + new Date * 1 + '.' + type.ext)
+        if (data && save) fs.promises.writeFile(filename, data)
+        return {
+            res,
+            filename,
+	    size: await getSizeMedia(data),
+            ...type,
+            data
+        }
+
+    }
+
+    return GojoMdNx
+}
+
+startᴍɪʜͥɪʀͣᴀͫɴɢᴀ-𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙-𝙼𝙳-𝙱𝚘𝚝()
+
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+	fs.unwatchFile(file)
+	console.log(chalk.redBright(`Update ${__filename}`))
+	delete require.cache[file]
+	require(file)
+})
