@@ -2,7 +2,7 @@
 <img src="https://telegra.ph/file/5b88df83fe259d9827fd9.jpg" alt="nz" width="350"/>
 </p>
 
-## Queen-Oshi
+## Md-Whatsapp-Bot
 
 <[Multi Device whatsapp Bot V.1](https://github.com/MihirangaKalhara/Queen-Oshi) by [ᴍɪʜͥɪʀͣᴀͫɴɢᴀ](https://github.com/MihirangaKalhara/Queen-Oshi)
 
