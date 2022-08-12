@@ -1,7 +1,7 @@
 //═══════════════════════════════════════════════════════//
 //
-//                              𝙶𝙾𝙹𝙾-𝚂𝙰𝚃𝙾𝚁𝚄 𝓫𝔂 𝓷𝓮𝔁𝓾𝓼𝓝𝔀
-//𝙰𝙳𝙾𝙿𝚃𝙴𝙳 𝙵𝚁𝙾𝙼  𝚂𝙲𝚁𝙸𝙿𝚃 𝙾𝙵 𝙲𝙷𝙴𝙴𝙼𝚂𝙱𝙾𝚃 𝚅2 𝙱𝚈 𝙳𝙶𝚇𝚎𝚘𝚗 
+//                              ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot
+//𝙰𝙳𝙾𝙿𝚃𝙴𝙳 𝙵𝚁𝙾𝙼  ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ 𝙱𝙾𝚃 𝚅1 𝙱𝚈 ᴍɪʜͥɪʀͣᴀͫɴɢᴀ 
 //
 //════════════════════════════//
 
@@ -11,20 +11,20 @@ const chalk = require('chalk')
 }
 
 //customize settings\\
-global.owner = ['Your Number']
-global.premium = ['Your Number']
-global.ownernomer = 'Your Number'
-global.ownername = '🐦Star Boy Nexus'
-global.botname = 'Gojo-Satoru'
-global.footer = '©NexusNwInc.'
-global.ig = 'https://github.com/nexusNw'
+global.owner = ['ᴍɪʜͥɪʀͣᴀͫɴɢᴀ']
+global.premium = ['94763116441']
+global.ownernomer = '94763116441'
+global.ownername = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ'
+global.botname = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ]'
+global.footer = '©ᴍɪʜͥɪʀͣᴀͫɴɢᴀ Md-Whatsapp-Bot[ʙᴇᴛᴀ ᴇᴅɪᴛɪᴏɴ].'
+global.ig = 'https://github.com/MihirangaKalhara/Md-Whatsapp-Bot'
 global.region = 'India, South India, Kerala'
-global.sc = 'https://github.com/nexusNw/Gojo-Satoru'
-global.myweb = 'https://youtube.com/channel/UCqoUjPvDdb0kjXNYdvPPpHQ'
-global.packname = 'Gojo-Satoru'
-global.author = '🐦Star Boy Nexus'
+global.sc = 'https://github.com/MihirangaKalhara/Md-Whatsapp-Bot'
+global.myweb = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ'
+global.packname = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ'
+global.author = 'ᴍɪʜͥɪʀͣᴀͫɴɢᴀ⁶⁴⁴¹ ⃟✦⃝̮̮👑🔨🕵🏻‍♂️'
 global.sessionName = 'session'
-global.prefa = ['','!','.','🐦','🐤','🗿']
+global.prefa = ['','!','.',#']
 global.sp = '⭔'
 global.mess = {
     success: 'Done ✓',
@@ -51,7 +51,7 @@ global.mess = {
    umpanawal: 5,
    potionawal: 1
 }
-global.thumb = fs.readFileSync('./GojoMedia/gojo.jpg')
+global.thumb = fs.readFileSync('./https://telegra.ph/file/5b88df83fe259d9827fd9.jpg')
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.flarun = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
