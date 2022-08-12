@@ -71,8 +71,8 @@ global.APIKeys = {
 	'https://zenzapis.xyz': 'YOURAPIKEY',
 }
   
-global.owner = ["9476316441"]
-global.ownername = ["ᴍɪʜͥɪʀͣᴀͫɴɢᴀ"]
+global.owner = ["Your Name"]
+global.ownername = ["Your Name"]
 ```
 </details>
 
@@ -120,7 +120,7 @@ npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 
 ## ```Connect With Me```
 <p align="center">
-<a href="https://wa.me/94763116441"><img src="https://img.shields.io/badge/Contact Nexus-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /><br>
+<a href="https://wa.me/94763116441"><img src="https://img.shields.io/badge/Contact ᴍɪʜͥɪʀͣᴀͫɴɢᴀ-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /><br>
 </p>
 
 </details>
